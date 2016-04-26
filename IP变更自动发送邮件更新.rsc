@@ -1,7 +1,7 @@
 {
 :global oldip ;
 /tool fetch url=http://1212.ip138.com/ic.asp keep-result=yes;
-:local file [:pick [file get ic.asp ] 1];
+:local file [:file get ic.asp contents];
 :local currip [:pick $file 168 [:find $file "]"]];
 if ($currip != $oldip) do={
 	:log warning ([:len $oldip].[:len $currip]);
