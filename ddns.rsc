@@ -2,7 +2,7 @@
 :local currip [:pick $ip  0 ([:len $ip]-3)];
 :local oldip [:resolve www.yourdomain.com server=8.8.8.8];
 if ($currip != $oldip) do={	
-	#æ›´æ–°è„šæœ¬;
+	#¸üÐÂ½Å±¾;
 	:log warning ("Address Change:".$oldip."-->".$currip);
 } else={
 	# :log info "Address Not Change";
